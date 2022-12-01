@@ -19,18 +19,26 @@
 - [Questions](#questions)
 
 ## Installation
+In git bash, "npm i" should install all required Node modules to run the program.
 
-"npm i" should install all required node modules to run the program.
-
-```md
-![alt text](Resources/Screenshots/module-install.png)
-```
-
-["npm i should install all required node modules to run the program"](Resources/Screenshots/module-install.png)
+![npm i](Resources/Screenshots/module-install.png)
 
 ## Usage
+You can run the program in git bash with the command "node server.js".
 
-If you run the program in git bash with command "node index.js" you should be able to access the application by opening "localhost:3001" in your browser.
+![node server.js](Resources/Screenshots/application-run.png)
+
+You should be able to access the application by opening "localhost:3001" in your browser.
+
+![localhost:3001](Resources/Screenshots/browser-address.png)
+
+The main page should have a button to open the Notes page.
+
+![Application main page](Resources/Screenshots/main-page.png)
+
+Notes can be added, reviewed, and deleted from the notes page.
+
+![Notes page](Resources/Screenshots/note-page.png)
 
 ## License
 
