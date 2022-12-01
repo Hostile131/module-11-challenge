@@ -19,6 +19,8 @@
 - [Questions](#questions)
 
 ## Installation
+Be sure to navigate to the Develop folder of the program.
+
 In git bash, "npm i" should install all required Node modules to run the program.
 
 ![npm i](Resources/Screenshots/module-install.png)
