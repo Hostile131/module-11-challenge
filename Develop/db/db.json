@@ -1,6 +1,12 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Here is a sample note.",
+        "text":"This note can be deleted",
+        "id": 55
+    },
+    {
+        "title":"Here is another sample note.",
+        "text":"We don't like this note either.",
+        "id": 47
     }
 ]
