@@ -1,19 +1,50 @@
-# Note Taker Starter Code
+# Note Taker
 
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+## Description
+
+- Motivation for this project: This application will help consolidate notes in an editable list.
+- Reason for this project: We can all benifit from a consolidated note repository.
+- Problem(s) solved by this project: This will keep notes in a central location.
+- Lessons learned: I learned how to use Node Express using JavaScript to store/recall/edit/delete information.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Bugs](#bugs)
+- [Questions](#questions)
+
+## Installation
+
+"npm i" should install all required node modules to run the program.
+
+```md
+![alt text](Resources/Screenshots/module-install.png)
+```
+
+["npm i should install all required node modules to run the program"](Resources/Screenshots/module-install.png)
+
+## Usage
+
+If you run the program in git bash with command "node index.js" you should be able to access the application by opening "localhost:3001" in your browser.
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+## Contributing
+
+If you have input to this application, please email me.
+
+## Bugs
+
+After a new note has been saved, the page has to be refreshed before the notes list on the left is populated with the new note. This is also the case after you select to delete a note.
+
+## Questions
+
+- [GitHub profile](https://www.github.com/Hostile131)
+- [actuallysmart@yahoo.com](mailto:actuallysmart@yahoo.com)

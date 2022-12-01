@@ -55,6 +55,7 @@ app.delete('/api/notes/:id', (req, res) => {
       )
     }
   })
+  res.redirect('/')
 });
 
 // This line writes the note fields into our pseudo database
@@ -94,6 +95,7 @@ app.post('/api/notes', (req, res) => {
 
   console.log(response);
   res.status(201).json(response);
+  res.redirect('/')
 });
 
 app.listen(PORT, () =>
