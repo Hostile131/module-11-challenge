@@ -1,10 +1,16 @@
 const express = require('express');
 const path = require('path');
+// This line allows for read/write access to file structure
+const fs = require('fs');
+// Helper method for generating unique IDs
+const uuid = require('./helpers/uuid');
 
 const app = express();
 
 // This line references our pseudo database (an "id" had to be added to our pseudo database for this to work)
 const db = require('./db/db.json');
+
+const { fstat } = require('fs');
 
 const PORT = 3001;
 
@@ -27,14 +33,67 @@ app.get('/api/notes', (req, res) => {
   return res.json(db)
 });
 
-// app.delete('/api/notes', (req, res) => {
-//   const someCode = placeholder
-// });
+// This line deletes the selected note
+app.delete('/api/notes/:id', (req, res) => {
+  console.info(`${req.method} request received to delete note.`);
+
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      const parsedNotes = JSON.parse(data);
+      
+      parsedNotes.splice(parsedNotes.findIndex(a => a.id === req.params.id) , 1)
+
+      fs.writeFile(
+        './db/db.json',
+        JSON.stringify(parsedNotes, null, 3),
+        (writeErr) =>
+        writeErr
+        ? console.error(writeErr)
+        : console.info('Successfully updated notes!')
+      )
+    }
+  })
+});
 
 // This line writes the note fields into our pseudo database
 app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to save a note.`);
-  console.log(req.body)
+  console.log(req.body);
+  
+  const { title, text } = req.body;
+
+  const newNote = {
+    title,
+    text,
+    id: uuid(),
+  };
+
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const parsedNotes = JSON.parse(data);
+      parsedNotes.push(newNote);
+      fs.writeFile(
+        './db/db.json',
+        JSON.stringify(parsedNotes, null, 3),
+        (writeErr) =>
+        writeErr
+        ? console.error(writeErr)
+        : console.info('Successfully updated notes!')
+      );
+    }
+  });
+
+  const response = {
+    status: 'success',
+    body: newNote,
+  };
+
+  console.log(response);
+  res.status(201).json(response);
 });
 
 app.listen(PORT, () =>

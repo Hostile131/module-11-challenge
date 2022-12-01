@@ -1,12 +1,7 @@
 [
-    {
-        "title":"Here is a sample note.",
-        "text":"This note can be deleted",
-        "id": 55
-    },
-    {
-        "title":"Here is another sample note.",
-        "text":"We don't like this note either.",
-        "id": 47
-    }
+   {
+      "title": "Have a great day",
+      "text": "No, I will not.",
+      "id": "3034"
+   }
 ]
